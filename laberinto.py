@@ -94,9 +94,14 @@ while not juego_terminado:
     else:
         print("Dirección no válida (W/S/A/D). Inténtalo de nuevo.")
 
+
+# Diccionario para mapear direcciones abreviadas a sus nombres completos
+direccion_completa = {'W': 'Arriba', 'S': 'Abajo', 'A': 'Izquierda', 'D': 'Derecha'}
+
 # Mensaje de felicitaciones y lista de movimientos
 coordenadas_deseadas = [(0, 0), (4, 4)]
 caracteres_deseados = ['E', 'J']
 imprimir_laberinto()
 print("\n¡Felicidades! Has llegado a la salida.")
-print("\nMovimientos realizados:", ', '.join(movimientos_realizados))
+print("\nMovimientos realizados:")
+print(', '.join([direccion_completa[i] for i in movimientos_realizados]))
